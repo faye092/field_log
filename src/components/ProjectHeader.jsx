@@ -12,7 +12,7 @@ function ProjectHeader({ name, location, startDate, duration, status, currentPha
     const currentStatus = statusConfig[status]
 
     return(
-      <div>
+      <div style={{padding:'0px 2px'}}>
         <div style={{
             padding:'14px 20px 12px',
             display:'flex',

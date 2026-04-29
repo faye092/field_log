@@ -70,8 +70,95 @@ function ActivityItem({type, title, by, cost, status, note}) {
             </div>
 
             {/* content */}
-            
+            <div style={{flex: 1, minHeight: 0}}>
+                {/* Type tag + cost */}
+                <div style={{
+                    display:'flex',
+                    alignItems:'center',
+                    gap:'6px',
+                    marginBottom:'4px',
+                    flexWrap:'wrap',
+                }}>
+                    <span style={{
+                        fontSize:'12px',
+                        fontWeight:'500',
+                        padding:'2px 8px',
+                        borderRadius:'20px',
+                        color: t.color,
+                        background: t.bg,
+                        border:`0.5px solid ${t.dotColor}33`,
+                        display:'inline-flex',
+                        alignItems:'center',
+                        gap:'4px',
+                    }}>
+                        <span style={{
+                            width:'4px',
+                            height:'4px',
+                            borderRadius:'50%',
+                            background:t.dotColor
+                        }}/> 
+                        {t.label}
+                    </span>
+
+                    {cost && (
+                        <span style={{
+                            fontSize:'12px',
+                            color:'#6B5010',
+                            background:'rgba(110,85,20,0.06)',
+                            border:'0.5px solid rgba(110,85,20,0.2)',
+                            padding:'2px 7px',
+                            borderRadius:'20px'
+                        }}>
+                            {cost}
+                        </span>
+                    )}
+                </div>
+
+                {/* Title */}
+                <div style={{
+                    fontSize:'13px',
+                    fontWeight:'500',
+                    color:'#111',
+                    marginBottom:'3px'
+                }}>
+                </div>
+
+                
+                {/* Meta */}
+                <div style={{
+                    fontSize:'12px',
+                    color:'rgba(0,0,0,0.55)',
+                    fontWeight:'500',
+                    marginBottom:'6px',
+                }}>
+                    by {by} {note && `· ${note}`}
+                </div>
+
+                {/* Status */}
+                <div style={{
+                    display:'inline-flex',
+                    alignItems:'center',
+                    gap:'4px',
+                    fontSize:'11px',
+                    padding:'2px 8px',
+                    borderRadius:'20px',
+                    color:s.color,
+                    background:s.bg,
+                    border:`0.5px solid ${s.border}`,
+                }}>
+                    <span style={{
+                        width:'4px',
+                        height:'4px',
+                        borderRadius:'50%',
+                        background:s.color,
+                    }}/>
+                    {s.label}
+                </div>
+            </div>
+
         </div>
     )
 
 }
+
+export default ActivityItem

@@ -38,7 +38,7 @@ function Timeline({ currentWeek, totalWeeks, currentPhase }) {
           W{currentWeek} · now
         </div>
         <div style={{
-          width: '2 px',
+          width: '2px',
           height: '10px',
           background: 'rgba(138,99,32,0.4)',
         }} />
